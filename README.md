@@ -1,3 +1,6 @@
+# ATTENTION
+This repository is going to make a pivot. seek issue #2 for more information
+
 # CallBaecker
 
 Intercepts method calls inorder to save arguments and to allow to terminate function from within a nested method
