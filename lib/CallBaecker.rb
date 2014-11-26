@@ -29,7 +29,7 @@ module CallBaecker
           # TODO make it pluggable
           # it shouldnt be limited to rubisierung
           if has_before_hook
-            *args = _self.instance_variable_get(:@__before_hook).call(params, args[0], callee)
+            *args = _self.instance_variable_get(:@__before_hook).call(params, args[0], callee, self, name)
           end
           send without, *args, &block
         end
@@ -63,7 +63,7 @@ module CallBaecker
           # TODO make it pluggable
           # it shouldnt be limited to rubisierung
           if has_before_hook  
-            *args = @__before_hook.call(params, args[0], callee)
+            *args = @__before_hook.call(params, args[0], callee, self, name)
           end
           send without, *args, &block
         end

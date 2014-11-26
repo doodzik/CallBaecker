@@ -34,10 +34,6 @@ class Setup
 end
 
 class CallBaeckerTest < Minitest::Test
-  def test_correct_defiend_methods
-
-  end
-
   def test_instance_method
     assert_equal ['value', 'value'], Setup.new.last_args_test('value', 'value')
   end

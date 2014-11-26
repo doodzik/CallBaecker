@@ -1,5 +1,7 @@
 # CallBaecker
 
+[![Build Status](https://travis-ci.org/doodzik/CallBaecker.svg?branch=master)](https://travis-ci.org/doodzik/CallBaecker)
+
 Intercepts method calls inorder to save arguments and to allow to terminate function from within a nested method
 
 ## Installation
