@@ -1,3 +1,6 @@
+# ATTENTION
+This repository is going to make a pivot. seek issue #2 for more information
+
 # CallBaecker
 
 [![Build Status](https://travis-ci.org/doodzik/CallBaecker.svg?branch=master)](https://travis-ci.org/doodzik/CallBaecker)
