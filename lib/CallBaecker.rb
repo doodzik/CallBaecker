@@ -31,7 +31,13 @@ module CallBaecker
           if has_before_hook
             *args = _self.instance_variable_get(:@__before_hook).call(params, args[0], callee, self, name)
           end
-          send without, *args, &block
+          value = send without, *args, &block
+          data = {}
+          data[:value] = value
+          if has_before_hook
+            data = _self.instance_variable_get(:@__after_hook).call(data)
+          end
+          data[:value]
         end
       end
       # teardow
@@ -65,7 +71,13 @@ module CallBaecker
           if has_before_hook  
             *args = @__before_hook.call(params, args[0], callee, self, name)
           end
-          send without, *args, &block
+          value = send without, *args, &block
+          data = {}
+          data[:value] = value
+          if has_before_hook
+            data = @__after_hook.call(data)
+          end
+          data[:value]
         end
       end
       # TODO teardown

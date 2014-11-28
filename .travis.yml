@@ -1,3 +1,12 @@
 language: ruby
 rvm:
-    - 2.1.0
+- 2.1.0
+deploy:
+  provider: rubygems
+  api_key:
+    secure: BvbynU1lUbqZX0Fyc9zovRttep5uyKWMyLOjAkHwE9kZ0DIDR4Ivpz3Rqo75Ep0wIFQHfbH+R/eOGDbTN3KwwU8UGFPQbCL+RH00mmobgZl0cN1/iTJOxNbjLYdzsRBTQqYPajQaMu01yKBhD8PXiQxCwSjrE3Ac4LjXgdkPThw=
+  gem: CallBaecker
+  on:
+    all_branches: true
+    tags: true
+    repo: doodzik/CallBaecker
